@@ -1,0 +1,10 @@
+.prof {
+    background-color: aqua;
+    width: 300px;
+    padding: 3rem;
+}
+.prof__Img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
