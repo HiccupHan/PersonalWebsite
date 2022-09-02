@@ -1,8 +1,46 @@
-.prof {
-    background-color: aqua;
-    width: 300px;
-    padding: 3rem;
+body{
+    margin: 0;
 }
+
+header {
+    top: 0;
+    background-color: cornflowerblue;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    z-index: 100;
+    opacity: 80%;
+}
+
+.logo{
+    width: 60px;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.splash__screen {
+    height: 200vh;
+    background-image: url(/img/background.jpg);
+    background-color: antiquewhite;
+    background-size: cover;
+    display: grid;
+
+}
+
+.prof {
+    margin-top: 120px;
+    align-items: baseline;
+    background-color: aqua;
+    height: 200px;
+    width: 300px;
+    padding: 100px;
+}
+
 .prof__img {
     width: 150px;
     height: 150px;
