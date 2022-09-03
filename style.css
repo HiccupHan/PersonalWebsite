@@ -1,10 +1,14 @@
+:root {
+    --background: cornflowerblue;
+}
+
 body{
     margin: 0;
 }
 
 header {
     top: 0;
-    background-color: cornflowerblue;
+    background-color: var(--background);
     width: 100%;
     text-align: center;
     position: fixed;
@@ -12,15 +16,41 @@ header {
     opacity: 80%;
 }
 
-.logo{
-    width: 60px;
-    border-radius: 10px;
-}
-
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+nav {
+    position: absolute;
+    text-align: left;
+    background-color: var(--background);
+    width: 100%;
+    display: none;
+}
+
+nav li {
+    color: white;
+    margin-bottom: 0.5em;
+    margin-left: 1em;
+}
+
+nav a {
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    color: black;
+}
+
+.logo{
+    margin: 2px;
+    width: 60px;
+    border-radius: 10px;
 }
 
 .splash__screen {
@@ -33,8 +63,8 @@ ul {
 }
 
 .prof {
-    margin-top: 120px;
-    align-items: baseline;
+    position: relative;
+    margin-top: 53px;
     background-color: aqua;
     height: 200px;
     width: 300px;
