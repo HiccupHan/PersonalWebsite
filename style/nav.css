@@ -1,9 +1,5 @@
 :root {
-    --background: cornflowerblue;
-}
-
-body{
-    margin: 0;
+    --background: rgba(100, 149, 237, 0.7);
 }
 
 header {
@@ -13,7 +9,6 @@ header {
     text-align: center;
     position: fixed;
     z-index: 100;
-    opacity: 80%;
 }
 
 ul {
@@ -53,26 +48,45 @@ nav a:hover {
     border-radius: 10px;
 }
 
-.splash__screen {
-    height: 200vh;
-    background-image: url(/img/background.jpg);
-    background-color: antiquewhite;
-    background-size: cover;
-    display: grid;
-
+.nav-toggle{
+    display: none;
 }
 
-.prof {
+.nav-toggle:checked ~ nav {
+    display: block;
+}
+
+.nav-toggle-label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    display: block;
+    background: white;
+    height: 2px;
+    width: 1.2em;
+    border-radius: 2px;
     position: relative;
-    margin-top: 53px;
-    background-color: aqua;
-    height: 200px;
-    width: 300px;
-    padding: 100px;
 }
 
-.prof__img {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: '';
+    position: absolute;
+}
+
+.nav-toggle-label span::before {
+    bottom: 7px;
+}
+
+.nav-toggle-label span::after {
+    top: 7px;
 }

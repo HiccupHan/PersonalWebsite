@@ -4,12 +4,14 @@
 <head>
     <title>Mike Han</title>
     <link rel="shortcut icon" href="/img/logo.jpeg" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style/content.css">
+    <link rel="stylesheet" href="/style/nav.css">
 </head>
 
 <body>
     <header>
         <img class="logo" src="/img/logo.jpeg" alt="LOGO">
+        <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul>
                 <li><a href="https://github.com/HiccupHan" target="_blank" rel="noopener noreferrer"> github </a></li>
@@ -17,15 +19,24 @@
                 <li><a href="#"> resume </a></li>
             </ul>
         </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span> 
+        </label>
     </header>
 
 
     <div class="splash__screen">
         <div class="prof">
-            <img class="prof__img" src="/img/Mike.jpg" alt="bad poo poo">
-            <p>@xuanzhehan</p>
-            <p>smooth brain programmer</p>
-            <p>trying to code html is pain</p>
+            <div class="prof__img">
+                <img class="selfie" src="/img/Mike.jpg" alt="bad poo poo">
+            </div>
+            <div class="intro">
+                <p>Hi there,</p>
+                <p>I'm Xuanzhe "Mike" Han. I'm a junior computer science student at UCLA.</p>
+                <p>I'm comfortable with C/C++, Python, and I have learned Java/JavaScript, Scheme/LISP, Prolog, and Bash Script</p>
+                <p>I also know HTML and CSS, and have worked with React.</p>
+                <p>I want to learn Rust, Go, C#, and potentially Swift in the near future.</p>
+            </div>
         </div>
     </div>
 </body>
