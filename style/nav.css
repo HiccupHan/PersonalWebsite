@@ -6,9 +6,34 @@ header {
     top: 0;
     background-color: var(--background);
     width: 100%;
-    text-align: center;
     position: fixed;
     z-index: 100;
+    text-align: center;
+}
+
+.logo-box {
+    width: fit-content;
+    margin: 7px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    border-radius: 7px;
+    margin-left: 40%;
+}
+
+.logo-box-s {
+    width: fit-content;
+    margin: 2px;
+    border-style: solid;
+    border-width: 1.5px;
+    border-color: black;
+    border-radius: 7px;
+}
+
+.logo-text {
+    font-family: 'Dancing Script', cursive, 'Segoe UI';
+    font-size: 15pt;
+    margin: 10px;
 }
 
 ul {
@@ -22,7 +47,9 @@ nav {
     text-align: left;
     background-color: var(--background);
     width: 100%;
-    display: none;
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
 }
 
 nav li {
@@ -33,19 +60,16 @@ nav li {
 
 nav a {
     color: white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Caveat', cursive, 'Segoe UI';
     text-transform: uppercase;
     font-size: 1rem;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+    text-decoration: none;
 }
 
 nav a:hover {
     color: black;
-}
-
-.logo{
-    margin: 2px;
-    width: 60px;
-    border-radius: 10px;
 }
 
 .nav-toggle{
@@ -53,7 +77,12 @@ nav a:hover {
 }
 
 .nav-toggle:checked ~ nav {
-    display: block;
+    transform: scale(1, 1);
+}
+
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 150ms ease-in-out 150ms;
 }
 
 .nav-toggle-label {
@@ -89,4 +118,59 @@ nav a:hover {
 
 .nav-toggle-label span::after {
     top: 7px;
+}
+
+@media screen and (min-width: 900px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 0.3fr auto minmax(800px, 20fr) 1fr;
+    }
+
+    .logo-box {
+        grid-column: 2 / 3;
+        width: max-content;
+    }
+
+    nav {
+        all: unset;
+        grid-column: 3 / 4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    nav a {
+        opacity: 1;
+        position: relative;
+    }
+
+    nav a::before {
+        content: '';
+        display: block;
+        height: 5px;
+        position: absolute;
+        background: black;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0, 1);
+        transition: transform ease-in-out 250ms;
+    }
+
+    nav a:hover::before{
+        transform: scale(1, 1);
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav li{
+        margin-left: 3em;
+        margin-bottom: 0;
+    }
 }
