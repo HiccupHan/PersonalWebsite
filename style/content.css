@@ -22,20 +22,28 @@ body{
     background-repeat: no-repeat;
     height: 100vh;
     display: grid;
-    grid-template-columns: minmax(800px, 3fr) 1fr;
+    grid-template-columns: minmax(700px, 1fr) 1fr;
     justify-items: center;
     align-items: center;
 }
 
 .greeting {
-    background-color: var(--text-background);
     display: flex;
     flex-direction: column;
     max-height: max-content;
     max-width: max-content;
-    margin-right: 20px;
     padding: 1em;
     text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    border-style: solid;
+    border-radius: 4px;
+    border-color: beige;
+    border-width: 4px;
+}
+
+h2 {
+    color: white;
 }
 
 .prof {
