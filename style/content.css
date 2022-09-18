@@ -1,5 +1,6 @@
 :root {
     --background: rgba(100, 149, 237, 0.7);
+    --text-background: rgba(246, 245, 245, 0.7);
 }
 
 body{
@@ -15,10 +16,32 @@ body{
     flex-direction: column;
 }
 
+.intro__splash {
+    background-image: url(/img/intro-screen.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(800px, 3fr) 1fr;
+    justify-items: center;
+    align-items: center;
+}
+
+.greeting {
+    background-color: var(--text-background);
+    display: flex;
+    flex-direction: column;
+    max-height: max-content;
+    max-width: max-content;
+    margin-right: 20px;
+    padding: 1em;
+    text-align: center;
+}
+
 .prof {
     margin-top: 75px;
     margin-left: 10px;
-    background-color: rgba(246, 245, 245, 0.7);
+    background-color: var(--text-background);
     display: flex;
     flex-direction: row;
     max-height: fit-content;

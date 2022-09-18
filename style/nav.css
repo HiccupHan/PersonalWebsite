@@ -11,6 +11,12 @@ header {
     text-align: center;
 }
 
+header.hide {
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+
 .logo-box {
     width: fit-content;
     margin: 7px;
@@ -120,7 +126,7 @@ nav a:hover {
     top: 7px;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .nav-toggle-label {
         display: none;
     }
