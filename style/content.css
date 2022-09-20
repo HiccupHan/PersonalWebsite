@@ -8,7 +8,7 @@ body{
 }
 
 .main__content {
-    height: 200vh;
+    height: fit-content;
     background-image: url(/img/background.jpg);
     background-color: antiquewhite;
     background-size: cover;
@@ -48,25 +48,24 @@ h2 {
 }
 
 .prof {
-    margin-top: 75px;
-    margin-left: 10px;
-    background-color: var(--text-background);
+    margin: 0px;
+    background-color: beige;
     display: flex;
     flex-direction: row;
-    max-height: fit-content;
-    max-width: 1000px;
+    height: 25vw;
+    width: 100vw;
     align-items: center;
-    border-radius: 6px;
     border-width: 2px;
     border-style: solid;
     border-color: black;
+    justify-content: space-between;
 }
 
 .prof__img {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
-    max-width: 20%;
+    width: 15vw;
     height: auto;
 }
 
@@ -77,12 +76,37 @@ h2 {
 }
 
 .intro {
-    margin-left: 40px;
+    margin-right: 13vw;
+}
+
+h3{
+    text-align: center;
+    margin-top: 0px;
+    padding-top: 0px;
 }
 
 p {
     margin: 8px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    padding: 1vw;
+}
+
+.transition__background {
+    width: 100vw;
+    height: 20vw;
+    background-image: url(/img/stock_desk.jpg);
+    background-repeat: none;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.about__me {
+    background-color: beige;
+    padding: 4em;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
 }
 
 @media screen and (max-width: 1000px){
@@ -101,6 +125,13 @@ p {
     
     h2 {
         margin: 0.5em;
+    }
 
+    .prof {
+        min-height: 50vh;
+    }
+
+    .intro {
+        margin-right: 4vw;
     }
 }
