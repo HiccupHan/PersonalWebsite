@@ -5,7 +5,8 @@
 header {
     top: 0;
     background-color: var(--background);
-    width: 100%;
+    left: 0;
+    right: 0;
     position: fixed;
     z-index: 100;
     text-align: center;
