@@ -50,3 +50,54 @@
     background-color: white;
 }
 
+.modal.show {
+    animation: fadeIn 200ms ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal.hide {
+    animation: fadeOut 200ms ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.modal.show .modal__content{
+    animation: fadeDown 200ms ease-in-out forwards;
+}
+
+@keyframes fadeDown {
+    0% {
+        transform: translateY(-20vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.modal.hide .modal__content{
+    animation: fadeUp 200ms ease-in-out forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20vh);
+    }
+}

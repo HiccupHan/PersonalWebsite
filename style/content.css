@@ -151,6 +151,7 @@ p {
     border-width: 2px;
     border-radius: 6px;
     transform: rotateY(180deg);
+    overflow: scroll;
 
 }
 
