@@ -5,10 +5,13 @@
 
 body{
     margin: 0;
+    min-width: 700px;
+    overflow: auto;
 }
 
 .main__content {
     background-color: antiquewhite;
+    overflow: hidden;
     padding: 0;
     margin: 0;
     left:0;
@@ -20,6 +23,7 @@ body{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+    min-height: 300px;
     display: grid;
     grid-template-columns: minmax(700px, 1fr) 1fr;
     justify-items: center;
@@ -35,61 +39,114 @@ body{
     padding: 1em;
     text-align: center;
     font-family: 'Lobster', cursive;
-    font-size: 2em;
+    font-size: max(3vh, 10px);
     border-style: solid;
     border-radius: 8px;
     border-color: beige;
     border-width: 8px;
 }
 
-h2 {
+.greeting h2 {
     color: white;
 }
 
 .prof {
     margin: 0px;
-    background-color: beige;
-    display: flex;
-    flex-direction: row;
-    height: 25vw;
+    background-color: rgb(40, 40, 40);
+    display: grid;
+    grid-template-columns: 15% 80%;
+    justify-content: start;
+    align-items: center;
+    height: fit;
     left: 0;
     right: 0;
-    align-items: center;
     border-width: 2px;
     border-style: solid;
     border-color: black;
-    justify-content: space-between;
 }
 
 .prof__img {
-    margin-top: 5px;
-    margin-left: 5px;
-    margin-bottom: 5px;
-    width: 15vw;
+    margin-left: 2vw;
+    width: auto;
     height: auto;
 }
 
 .selfie {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 6px;
+    height: 33vh;
+    min-height: 250px;
+    width: 15vw;
+    min-width: 100px;
+    object-fit: cover;
+    object-position: 50% 0%;
+    border-radius: 2%;
+    border-style: groove;
+    border-color: black;
 }
 
 .intro {
-    margin-right: 13vw;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6%;
+    padding-right: 6%;
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    max-height: 60vh;
+    overflow: auto;
+}
+
+#about{
+    margin-bottom: 2%;
+}
+
+#about h3{
+    text-align: left;
+    font-size: 30px;
+    text-shadow: 0.01ch 0.01ch 0.5ch #4d4d4d;
+    color: #DDDDDD;
+    padding: 0;
+    margin-bottom: 1.5%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#about p{
+    font-size: 18px;
+    text-align: left;
+    color: #DDDDDD;
+    padding: 0;
+    margin: 0;
+}
+
+#skills h3{
+    text-align: left;
+    font-size: 30px;
+    text-shadow: 0.01ch 0.01ch 0.5ch #4d4d4d;
+    color: #DDDDDD;
+    padding: 0;
+    margin-bottom: 0.5%;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#skills p{
+    font-size: 18px;
+    text-align: left;
+    color: #DDDDDD;
+    padding: 0;
+    margin-bottom: 0;
+    margin-top: 1;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 h3{
-    text-align: center;
-    margin-top: 0px;
-    padding-top: 0px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-p {
-    margin: 8px;
+p{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-align: center;
-    padding: 1vw;
 }
 
 .transition__background {
@@ -142,6 +199,10 @@ p {
 }
 
 .card__back {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     background: white;
@@ -151,8 +212,13 @@ p {
     border-width: 2px;
     border-radius: 6px;
     transform: rotateY(180deg);
-    overflow: scroll;
+    overflow: auto;
+}
 
+.card__back p{
+    text-align: center;
+    padding-left: 4%;
+    padding-right: 4%;
 }
 
 @media screen and (max-width: 1000px){
