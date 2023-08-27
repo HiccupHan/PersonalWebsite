@@ -39,7 +39,6 @@ body{
     padding: 1em;
     text-align: center;
     font-family: 'Lobster', cursive;
-    font-size: max(3vh, 10px);
     border-style: solid;
     border-radius: 8px;
     border-color: beige;
@@ -48,6 +47,7 @@ body{
 
 .greeting h2 {
     color: white;
+    font-size: max(4vh, 10px);
 }
 
 .prof {
@@ -92,6 +92,24 @@ body{
     padding-bottom: 3.5%;
     max-height: 60vh;
     overflow: auto;
+    scrollbar-width: 0.6vw;
+    scrollbar-color: rgb(40, 40, 40);
+}
+.intro::-webkit-scrollbar{
+    background: rgb(40, 40, 40);
+    width: 0.6vw;
+}
+
+.intro::-webkit-scrollbar-track {
+    background: rgb(40, 40, 40);
+}
+.intro::-webkit-scrollbar-thumb {
+    background-color: rgb(23, 23, 23);   
+    border-radius: 7%;      
+}
+
+.intro::-webkit-scrollbar-thumb:hover {
+    background: #4d4d4d;
 }
 
 #about{
@@ -116,6 +134,10 @@ body{
     color: #DDDDDD;
     padding: 0;
     margin: 0;
+}
+
+#skills {
+    margin-bottom: 2%;
 }
 
 #skills h3{
@@ -161,7 +183,7 @@ p{
 .intro__cards {
     width: 100%;
     height: fit-content;
-    background-color: rgb(23, 32, 42);
+    background-color: rgb(40, 40, 40);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30vw;
@@ -179,18 +201,22 @@ p{
     position: relative;
 }
 
-.card:hover {
+.card.isflipped{
     transform: rotateY(180deg);
 }
+.card:hover{
+    cursor: pointer; 
+}
+
 
 .card__front {
     height: 100%;
     width: 100%;
     position: absolute;
-    background: beige;
+    background: #DDDDDD;
     backface-visibility: hidden;
     border-style: solid;
-    border-color: black;
+    border-color: rgb(40, 40, 40);
     border-width: 2px;
     border-radius: 6px;
     display: flex;
@@ -201,8 +227,6 @@ p{
 .card__back {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     background: white;
@@ -217,6 +241,7 @@ p{
 
 .card__back p{
     text-align: center;
+    margin: auto;
     padding-left: 4%;
     padding-right: 4%;
 }

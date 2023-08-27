@@ -3,10 +3,13 @@ const navToggle = document.getElementById('nav__toggle');
 const resumeToggle = document.getElementById('resume__toggle');
 const modal = document.querySelector('.modal');
 const modalClose = document.getElementById('close__modal');
-let prevScrollPos = window.pageYOffset;
+const card1 = document.getElementById('card1');
+const card2 = document.getElementById('card2');
+const card3 = document.getElementById('card3');
+let prevScrollPos = window.scrollY;
 
 window.addEventListener('scroll', () => {
-    let curScrollPos = window.pageYOffset;
+    let curScrollPos = window.scrollY;
 
     if (prevScrollPos < curScrollPos) {
         navToggle.checked = false;
@@ -30,7 +33,6 @@ modal.addEventListener('click', event => {
     if (event.currentTarget === event.target) closeModal();
 })
 
-window.addEventListener('esc')
 
 function showModal() {
     modal.style.display = 'flex';
@@ -46,3 +48,13 @@ function closeModal() {
         document.body.style.overflow = '';
     }, 200)
 }
+
+card1.addEventListener('click', function() {
+    card1.classList.toggle('isflipped');
+})
+card2.addEventListener('click', function() {
+    card2.classList.toggle('isflipped');
+})
+card3.addEventListener('click', function() {
+    card3.classList.toggle('isflipped');
+})
