@@ -10,7 +10,7 @@ body{
 }
 
 .main__content {
-    background-color: antiquewhite;
+    background-color: rgb(40, 40, 40);
     overflow: hidden;
     padding: 0;
     margin: 0;
@@ -41,12 +41,12 @@ body{
     font-family: 'Lobster', cursive;
     border-style: solid;
     border-radius: 8px;
-    border-color: beige;
+    border-color: rgb(40, 40, 40);
     border-width: 8px;
 }
 
 .greeting h2 {
-    color: white;
+    color: rgb(40, 40, 40);
     font-size: max(4vh, 10px);
 }
 
@@ -88,8 +88,10 @@ body{
     flex-direction: column;
     padding-left: 6%;
     padding-right: 6%;
-    padding-top: 3.5%;
-    padding-bottom: 3.5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 3.5%;
+    margin-bottom: 3.5%;
     max-height: 60vh;
     overflow: auto;
     scrollbar-width: 0.6vw;
@@ -182,12 +184,12 @@ p{
 
 .intro__cards {
     width: 100%;
-    height: fit-content;
-    background-color: rgb(40, 40, 40);
+    height: max(27vw, 200px);
+    background-color: rgba(40, 40, 40, 1);
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 30vw;
-    grid-gap: 30px;
+    grid-template-rows: max(27vw, 200px);
+    column-gap: 7vw;
     justify-items: center;
 }
 
@@ -222,6 +224,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .card__back {
@@ -244,6 +247,30 @@ p{
     margin: auto;
     padding-left: 4%;
     padding-right: 4%;
+}
+
+.card__back::-webkit-scrollbar{
+    background: rgb(40, 40, 40);
+    width: 0.3vw;
+}
+
+.card__back::-webkit-scrollbar-track {
+    background: white;
+}
+.card__back::-webkit-scrollbar-thumb {
+    background-color: rgb(23, 23, 23);   
+    border-radius: 10%;      
+}
+
+.card__back::-webkit-scrollbar-thumb:hover {
+    background: #4d4d4d;
+}
+
+.card__back a:link{
+    text-decoration: none;
+}
+.card__back a:visited{
+    text-decoration: none;
 }
 
 @media screen and (max-width: 1000px){
