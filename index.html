@@ -13,6 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/style/flickity.css" media="screen">
 </head>
 
 <body>
@@ -37,11 +39,100 @@
         </label>
     </header>
 
-    <div class="modal" id="resume">
-        <a href="#close" class="close" id="close__modal"></a>
+    <div class="modal" id="resume__modal">
+        <a href="#close" class="close" id="close__resume__modal"></a>
         <div class="modal__content">
             <iframe src="/pdf/resume.pdf" width="100%" height="100%"></iframe>
         </div>
+    </div>
+
+    <div class="modal" id="project__modal">
+        <a href="#close" class="close" id="close__project__modal"></a>
+            <div class="project__details" id="detail1">
+                <div class="detail__description">
+                    <p>A chrome extension I made with a group of 5 people. It allows users to upload their resumes, and when they are
+                        browsing LinkedIn job postings, they can use the extension to match uploaded resumes to the job posting to see an
+                        overall compatibility score and individual compatibility score for each resume so the user can easily determine which
+                        one is more suitable for the particular application. 
+                    </p>
+                    <p>The extension will also parse the posting and show the user keywords like required skills, job location, etc. In
+                        addition, it will present the user with a glassdoor review of the company.
+                    </p>
+                    <p>React was used to build the extension's frontend, which is what I primarily worked on. StreamLit, FastAPI, LevelDB,
+                        and SpaCy were used for backend. Click <a href="https://github.com/HiccupHan/ResuMatch/tree/main" target="_blank"
+                            rel="noopener noreferrer">here</a> to check out the repository and <a
+                            href="https://youtu.be/vnt1pXzRrbI?si=u_3vOCXtod0z12jR" target="_blank" rel="noopener noreferrer">here</a> to
+                        watch a presentation video.
+                    </p>
+                </div>
+                <div class="detail__img__container">
+                    <div class="project__gallery__cell gallery__cell1 fade">
+                        <img class="detail__img" src="/img/resumatch2.png">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell1 fade">
+                        <img class="detail__img" src="/img/resumatch3.png">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell1 fade">
+                        <img class="detail__img" src="/img/resumatch4.png">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell1 fade">
+                        <img class="detail__img" src="/img/resumatch5.png">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell1 fade">
+                        <img class="detail__img" src="/img/resumatch6.png">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="project__details" id="detail2">
+                <div class="detail__description">
+                    <p>A Network Attached Storage I made using a Raspberry Pi 4 Model B, 4 hard drives, and a SATA hat I bought online. It's running Open Media
+                        Vault. I designed the case myself with Autodesk Inventor.
+                    </p>
+                    <p>The NAS has a magnetically attached side panel, fan grill, and feet. I also made a external temperature-controlled
+                        fan using an arduino that can also be magnetically attached. Check out this <a
+                            href="https://drive.google.com/file/d/1dldis8797mawYGRQJsV4GqPp_mTqSmV6/view?usp=sharing" target="_blank"
+                            rel="noopener noreferrer">video</a> to see the fully assembled NAS and this <a
+                            href="https://drive.google.com/file/d/1P498C0TtsR1Atp1MjcJTchMxZlc7sHSQ/view?usp=sharing" target="_blank"
+                            rel="noopener noreferrer">video</a> to see the fan module in detail.
+                    </p>
+                </div>
+                <div class="detail__img__container">
+                    <div class="project__gallery__cell gallery__cell2 fade">
+                        <img class="detail__img" src="/img/nas1.jpg">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell2 fade">
+                        <img class="detail__img" src="/img/nas2.jpg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+            <div class="project__details" id="detail3">
+                <div class="detail__description">
+                    <p>A macro pad I made with a Raspberry Pi Pico. It's running MicroPython, features a a rotary encoder and a small OLED
+                        screen. It has several profiles that can be switched with a keypress, and the OLED screen will show a small bit
+                        image that match the profile.
+                    </p>
+                    <p>The case and keycaps are designed in Autodesk Inventor and 3D printed. Watch this <a
+                        href="https://drive.google.com/file/d/1e_o-lbGVLVGy5bLOEzxf5hGl8Y9OGJ7O/view?usp=sharing" target="_blank"
+                        rel="noopener noreferrer">video</a> to see the macro pad in action and this <a
+                        href="https://drive.google.com/file/d/1EN9REot0zgsKPnOPLZ7-SZyEPGUlwxNc/view?usp=sharing" target="_blank"
+                        rel="noopener noreferrer">video</a> to see the design.
+                    </p>
+                </div>
+                <div class="detail__img__container">
+                    <div class="project__gallery__cell gallery__cell3 fade">
+                        <img class="detail__img" src="/img/macropad1.jpg">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell3 fade">
+                        <img class="detail__img" src="/img/macropad2.jpg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
     </div>
 
     <div class="main__content">
@@ -105,11 +196,11 @@
                     </div>
                 </div>
 
-                <div class="project__stack" id="project1">
+                <div class="project__stack">
                     <div class="project__title">
                         <h2>ResuMatch</h2>
                     </div>
-                    <div class="project__image__container">
+                    <div class="project__image__container" id="project1">
                         <img class="front__image" src="/img/resumatch.png">
                         <div class="fade__container">
                             <img src="/img/resumatch.png" class="fade__image">
@@ -124,7 +215,7 @@
                     </div>
                 </div>
 
-                <div class="project__stack" id="project2">
+                <div class="project__stack" id="project3">
                     <div class="project__title">
                         <h2>Macropad</h2>
                     </div>
@@ -189,7 +280,7 @@
                 <div class="card__back">
                     <p>I'm a board member in 3D4E, a 3D printing club in UCLA, and have occupied several positions.</p>
                     <p>I was the biomedical team lead. I led the team to build custom pipette holders and oximeters.</p>
-                    <p>Currently I'm the web master and the mechanical keyboard team lead. Visit the site <a href="https://3d4eatucla.github.io/" target="_blank" rel="noopener noreferrer">here</a></p>
+                    <p>Currently I'm the web master and the mechanical keyboard team lead. Visit the club website <a href="https://3d4eatucla.github.io/" target="_blank" rel="noopener noreferrer">here</a></p>
                     
             </div>
         </div>
@@ -200,6 +291,7 @@
         <p>Feel free to contact me!</p>
     </div>
     </div>
+    <script src="/flickity.pkgd.js"></script>
     <script src="main.js"></script>
 </body>
 
