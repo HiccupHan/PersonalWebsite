@@ -48,6 +48,7 @@
 
     <div class="modal" id="project__modal">
         <a href="#close" class="close" id="close__project__modal"></a>
+
             <div class="project__details" id="detail1">
                 <div class="detail__description">
                     <p>A chrome extension I made with a group of 5 people. It allows users to upload their resumes, and when they are
@@ -88,6 +89,7 @@
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
             </div>
+
             <div class="project__details" id="detail2">
                 <div class="detail__description">
                     <p>A Network Attached Storage I made using a Raspberry Pi 4 Model B, 4 hard drives, and a SATA hat I bought online. It's running Open Media
@@ -112,6 +114,7 @@
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
             </div>
+
             <div class="project__details" id="detail3">
                 <div class="detail__description">
                     <p>A macro pad I made with a Raspberry Pi Pico. It's running MicroPython, features a a rotary encoder and a small OLED
@@ -131,6 +134,72 @@
                     </div>
                     <div class="project__gallery__cell gallery__cell3 fade">
                         <img class="detail__img" src="/img/macropad2.jpg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+
+            <div class="project__details" id="detail4">
+                <div class="detail__description">
+                    <p>A smart trash grabber with an accompying mobile app I made with a team of 4 other people in 36 hours. Most parts on
+                        the grabber are 3D printed or laser cut. It features a servo-operated claw, allowing users to pick up trash with
+                        the click of a button. If the grabber detects trash being picked up with its depth sensor, it will beep and send GPS
+                        location data to the grabber's accompanying app.
+                    </p>
+                    <p>The mobile app is a Pokémon-GO style Unity game. The main interface shows the user on a 3D map. People can report
+                        where trash is seen on the app, the locations of which will be sent to the backend made using Firebase, and trash
+                        hotspots will be calculated using the k means clustering algorithm and shown on the map. Whenever a user picks up
+                        trash, the app will receive GPS data from the grabber and display a flower for all other users on the map at the
+                        location indicated by the data. It will also increment user XP, incentivizing users to pick up more trash. The
+                        objective is to fill the map with as many flowers as possible to make it look like a blossoming garden.
+                    </p>
+                    <p>I worked on the Unity app with a friend. Check out the <a href="https://devpost.com/software/trashinator3000"
+                            target="_blank" rel="noopener noreferrer">Devpost</a> and the <a
+                            href="https://github.com/HiccupHan/LiterallyTrash" target="_blank" rel="noopener noreferrer">respository</a>.
+                    </p>
+                </div>
+                <div class="detail__img__container">
+                    <div class="project__gallery__cell gallery__cell4 fade">
+                        <img class="detail__img" src="/img/trashinator1.jpg">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell4 fade">
+                        <img class="detail__img" src="/img/trashinator2.jpg">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell4 fade">
+                        <img class="detail__img" src="/img/transhinator3.jpg">
+                    </div>
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+            </div>
+
+            <div class="project__details" id="detail5">
+                <div class="detail__description">
+                    <p>A React web app I made with 4 other people. A user can create an account, choose an avatar, and interact with other
+                        users on a virtual platform. They can move their avatar around on a map, chat with other users in a global chat
+                        room, and create a little virtual booth with a zoom call link. If other users walk into the booth, they will be
+                        prompted with the link to join the call.
+                    </p>
+                    <p>The frontend of the app is made using React and CSS, and the backend is powered by AWS with DynamoDB and Ably
+                        Realtime. I mostly worked on the frontend. Watch the <a
+                            href="https://drive.google.com/file/d/1yiE2z-JMzZFOG7VCR74yypdhz4cAearM/view?usp=sharing" target="_blank"
+                            rel="noopener noreferrer">video</a> to see it in action and visit the 
+                            <a href="https://github.com/Fall-2021-CS-35L/fall2021-cs35l" target="_blank" rel="noopener noreferrer">respository</a>.
+                    </p>
+                </div>
+                <div class="detail__img__container">
+                    <div class="project__gallery__cell gallery__cell5 fade">
+                        <img class="detail__img" src="/img/digimeet1.jpg">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell5 fade">
+                        <img class="detail__img" src="/img/digimeet2.png">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell5 fade">
+                        <img class="detail__img" src="/img/digimeet3.png">
+                    </div>
+                    <div class="project__gallery__cell gallery__cell5 fade">
+                        <img class="detail__img" src="/img/digimeet4.jpg">
                     </div>
                     <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                     <a class="next" onclick="plusSlides(1)">&#10095;</a>
@@ -178,7 +247,9 @@
         </div>
         
         <div class="projects">
-            <h1>My Projects</h1>
+            <div class="project__section__title">
+                <h1>My Projects</h1>
+            </div>
             <div class="projects__container">
                 <div class="project__stack" id="project2">
                     <div class="project__title">
@@ -233,6 +304,44 @@
                             <img src="/img/macropad2.jpg" class="fade__image">
                             <img src="/img/macropad2.jpg" class="fade__image">
                             <img src="/img/macropad2.jpg" class="fade__image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project__stack" id="project4">
+                    <div class="project__title">
+                        <h2>Trashinator 3000</h2>
+                    </div>
+                    <div class="project__image__container">
+                        <img class="front__image" src="/img/trashinator2.jpg" >
+                        <div class="fade__container">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                            <img src="/img/trashinator2.jpg" class="fade__image">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project__stack" id="project5">
+                    <div class="project__title">
+                        <h2>Digimeet</h2>
+                    </div>
+                    <div class="project__image__container">
+                        <img class="front__image" src="/img/digimeet2.png" >
+                        <div class="fade__container">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
+                            <img src="/img/digimeet2.png" class="fade__image">
                         </div>
                     </div>
                 </div>

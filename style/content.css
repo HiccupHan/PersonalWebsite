@@ -192,32 +192,34 @@ p{
 }
 
 .projects {
-    height: 50vh;
+    height: 55vh;
     width:100%;
+    min-height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
     border-width: 2px;
     border-style: solid;
     border-color: black;
-    min-height: 300px;
+    min-height: 340px;
 }
-.projects h1{
-    margin-bottom: 1%;
-    margin-top: 0;
-    padding: 1%;
+
+
+.project__section__title{
+    margin: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: #DDDDDD;
     text-shadow: 0.03ch 0.03ch 0.9ch #4d4d4d;
-    font-size: 30px;
+    font-size: 16px;
 }
 
 .projects__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-items: center;
-    margin-bottom: 1%;
+    height: 100%;
+    margin-bottom: 3%;
 }
 
 .project__stack {
@@ -225,23 +227,23 @@ p{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 28vw;
+    height: 35vh;
+    min-height: 200px;
+    margin-right: 40px;
+    width: calc((100% - 120px) / 3);
     background-color: rgba(155, 155, 155, 0.5);
-    padding-bottom: 6%;
     border-style: groove;
     border-color: black;
     border-radius: 20px;
-    padding-left: 5%;
-    padding-right: 5%;
 }
 
 .project__stack:has(.project__image__container:hover) {
     background-color: rgb(61, 61, 61);
-    border-style: none;
 }
 
 .project__image__container {
-    height: fit-content;
+    height: 30vh;
+    min-height: 150px;
     position: relative;
     transition: scale 100ms;
 }
@@ -267,6 +269,7 @@ p{
 
 .fade__image {
     height: 25vh;
+    min-height: 100px;
     width: 20vw;
     object-fit: scale-down;
     position: absolute;
@@ -301,6 +304,13 @@ p{
   .fade__image:is(:nth-child(7), :nth-child(8)) {
     animation-delay: 2250ms;
   }
+
+  .project__title h2{
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #DDDDDD;
+    font-size: 20px;
+}
   
   @media(max-width: 1200px) {
     body {    
@@ -362,13 +372,6 @@ p{
       opacity: 0;
     }
   }
-
-.project__title h2{
-    text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #DDDDDD;
-    font-size: 20px;
-}
 
 .intro__cards {
     width: 100%;

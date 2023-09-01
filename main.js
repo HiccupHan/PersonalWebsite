@@ -7,11 +7,15 @@ const resumeModalClose = document.getElementById('close__resume__modal');
 const project1 = document.getElementById('project1');
 const project2 = document.getElementById('project2');
 const project3 = document.getElementById('project3');
+const project4 = document.getElementById('project4');
+const project5 = document.getElementById('project5');
 const projectModal = document.getElementById('project__modal');
 const projectModalClose = document.getElementById('close__project__modal');
 const detail1 = document.getElementById('detail1');
 const detail2 = document.getElementById('detail2');
 const detail3 = document.getElementById('detail3');
+const detail4 = document.getElementById('detail4');
+const detail5 = document.getElementById('detail5');
 
 const card1 = document.getElementById('card1');
 const card2 = document.getElementById('card2');
@@ -47,13 +51,22 @@ resumeModal.addEventListener('click', event => {
 project1.addEventListener('click', function(){showModal(projectModal); showProject(detail1);})
 project2.addEventListener('click', function(){showModal(projectModal); showProject(detail2);})
 project3.addEventListener('click', function(){showModal(projectModal); showProject(detail3);})
-projectModalClose.addEventListener('click', function(){closeModal(projectModal);if(detail1.style.display=='grid') closeProject(detail1);if(detail2.style.display=='grid') closeProject(detail2);if(detail3.style.display=='grid') closeProject(detail3);})
+project4.addEventListener('click', function(){showModal(projectModal); showProject(detail4);})
+project5.addEventListener('click', function(){showModal(projectModal); showProject(detail5);})
+projectModalClose.addEventListener('click', function () { closeModal(projectModal); 
+                        if (detail1.style.display == 'grid') closeProject(detail1); 
+                        if (detail2.style.display == 'grid') closeProject(detail2); 
+                        if (detail3.style.display == 'grid') closeProject(detail3);
+                        if (detail4.style.display == 'grid') closeProject(detail4); 
+                        if (detail5.style.display == 'grid') closeProject(detail5);})
 projectModal.addEventListener('click', event => {
     if (event.currentTarget === event.target){
        closeModal(projectModal);
        if(detail1.style.display=='grid') closeProject(detail1);
        if(detail2.style.display=='grid') closeProject(detail2);
        if(detail3.style.display=='grid') closeProject(detail3);
+       if(detail4.style.display == 'grid') closeProject(detail4);
+       if(detail5.style.display == 'grid') closeProject(detail5);
     } 
 })
 
@@ -74,6 +87,7 @@ function closeModal(modal) {
 }
 let slideIndex = 1;
 showSlides(slideIndex);
+
 function showProject(detail) {
     detail.style.display = 'grid';
     slideIndex = 1;
@@ -108,7 +122,11 @@ function plusSlides(n) {
 
 function showSlides(n) {
   let i;
-    let slides = detail1.style.display == 'grid' ? document.getElementsByClassName("gallery__cell1") : detail2.style.display == 'grid' ? document.getElementsByClassName("gallery__cell2") : document.getElementsByClassName("gallery__cell3");
+    let slides = detail1.style.display == 'grid' ? document.getElementsByClassName("gallery__cell1") : 
+                detail2.style.display == 'grid' ? document.getElementsByClassName("gallery__cell2") : 
+                detail3.style.display == 'grid' ? document.getElementsByClassName("gallery__cell3") :
+                detail4.style.display == 'grid' ? document.getElementsByClassName("gallery__cell4") :
+                document.getElementsByClassName("gallery__cell5");
   if (n < 1) {slideIndex = slides.length}
   if (n > slides.length) {slideIndex = 1}
   for (i = 0; i < slides.length; i++) {
@@ -116,3 +134,13 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "flex";
 }
+
+
+var projectsSelector = document.querySelector('.projects__container');
+var flkty = new Flickity( projectsSelector, {
+  // options
+  cellAlign: 'center',
+  groupCells: true,
+  freeScroll: true,
+  contain: true
+});
