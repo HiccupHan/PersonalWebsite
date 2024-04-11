@@ -1,4 +1,4 @@
 # Personal Website
-Personal website for portfolio
-# Work-in-progress
-Experimenting with HTML, CSS, and serverless JavaScript
+Personal website for portfolio. Deployed with Netlify.
+# Web Link
+Visit link: https://xuanzhehan.netlify.app/
