@@ -191,7 +191,6 @@ p{
 }
 #transition3 {
     background-image: url(/img/coffee.webp);
-    background-position: 50% 200px;
 }
 
 .projects {
@@ -559,6 +558,7 @@ p{
         height: 35vh;
         background-position: center;
         background-attachment: scroll;
+        background-repeat: no-repeat;
     }
     .project__section__title {
         margin-bottom: 30px;
