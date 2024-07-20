@@ -142,5 +142,6 @@ var flkty = new Flickity( projectsSelector, {
   cellAlign: 'center',
   groupCells: true,
   freeScroll: true,
-  contain: true
+  contain: true,
+  pageDots: window.innerWidth < 1000 ? false : true
 });

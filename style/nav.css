@@ -20,7 +20,8 @@ header {
     border-width: 3px;
     border-color: white;
     border-radius: 7px;
-    margin-left: 40%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .logo__box__s {
