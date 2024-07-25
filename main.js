@@ -20,44 +20,20 @@ const detail5 = document.getElementById('detail5');
 const card1 = document.getElementById('card1');
 const card2 = document.getElementById('card2');
 const card3 = document.getElementById('card3');
-
-
-function is_touch_enabled() {
-    return ( 'ontouchstart' in window ) || 
-           ( navigator.maxTouchPoints > 0 ) || 
-           ( navigator.msMaxTouchPoints > 0 );
-}
-
 let prevScrollPos = window.scrollY;
-if(is_touch_enabled()){
-    window.addEventListener('scroll', () => {
-        let curScrollPos = window.scrollY;
-    
-        if (prevScrollPos < curScrollPos - 5) {
-            navToggle.checked = false;
-            header.style.top = '-73px';
-        }
-        else {
-            header.style.top = '0';
-        }
-        prevScrollPos = curScrollPos;
-    })
-}
-else{
-    window.addEventListener('scroll', () => {
-        let curScrollPos = window.scrollY;
-    
-        if (prevScrollPos < curScrollPos) {
-            navToggle.checked = false;
-            header.style.top = '-73px';
-        }
-        else {
-            header.style.top = '0';
-        }
-        prevScrollPos = curScrollPos;
-    })
-}
 
+window.addEventListener('scroll', () => {
+    let curScrollPos = window.scrollY;
+
+    if (prevScrollPos < curScrollPos) {
+        navToggle.checked = false;
+        header.style.top = '-73px';
+    }
+    else {
+        header.style.top = '0';
+    }
+    prevScrollPos = curScrollPos;
+})
 
 window.addEventListener('keydown', event => {
     if (event.key === 'Escape' && resumeModal.style.display === 'flex') closeModal(resumeModal);
