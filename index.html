@@ -1,435 +1,298 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <title>Mike Han</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="/img/logo.png" />
-    <link rel="stylesheet" href="/style/content.css">
-    <link rel="stylesheet" href="/style/nav.css">
-    <link rel="stylesheet" href="/style/modal.css">
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Portfolio for Xuanzhe Mike Han, UCLA computer science graduate student and software engineer.">
+    <title>Xuanzhe "Mike" Han | Software Engineer</title>
+    <link rel="icon" href="img/logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="/style/flickity.css" media="screen">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Dancing+Script:wght@600&family=Lobster&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style/content.css">
+    <link rel="stylesheet" href="style/nav.css">
+    <link rel="stylesheet" href="style/modal.css">
+    <script src="main.js" defer></script>
 </head>
 
 <body>
-    <header>
-        <div class="logo__box">
-            <div class="logo__box__s">
-                <h1 class="logo__text">Xuanzhe Han</h1>
-            </div>
-        </div>
-        <input type="checkbox" id="nav__toggle" class="nav__toggle">
-        <nav>
-            <ul>
-                <li><a href="https://github.com/HiccupHan" target="_blank" rel="noopener noreferrer"> github </a></li>
-                <li><a href="https://www.linkedin.com/in/xuanzhe-han-542225206" target="_blank"
-                        rel="noopener noreferrer"> linkedin </a></li>
-                <li><a href="mailto: hanxuanzhe2002@gmail.com"> email </a></li>
-                <li id="resume__toggle"><a href="#resume"> resume </a></li>
-            </ul>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Xuanzhe Han home">Xuanzhe Han</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="nav-toggle__bar"></span>
+            <span class="sr-only">Menu</span>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <button class="nav-link" type="button" data-open-modal="resume-modal">Resume</button>
+            <a href="mailto:hanxuanzhe2002@gmail.com">Email</a>
         </nav>
-        <label for="nav__toggle" class="nav__toggle__label">
-            <span></span>
-        </label>
     </header>
 
-    <div class="modal" id="resume__modal">
-        <a href="#close" class="close" id="close__resume__modal"></a>
-        <div class="modal__content">
-            <iframe src="/pdf/resume.pdf" width="100%" height="100%"></iframe>
+    <main id="top">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="hero__content">
+                <p class="eyebrow">UCLA Computer Science M.S. candidate</p>
+                <h1 id="hero-title">Xuanzhe "Mike" Han</h1>
+                <p class="hero__summary">
+                    I build software across systems, web, and machine learning: from ROS pipelines and
+                    TypeScript dashboards to decentralized collaboration tools and on-device model deployment.
+                </p>
+                <div class="hero__actions">
+                    <a class="button button--primary" href="#projects">View Projects</a>
+                    <a class="button button--secondary" href="pdf/resume.pdf" target="_blank" rel="noopener">Open
+                        Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--split" id="about" aria-labelledby="about-title">
+            <figure class="profile">
+                <img src="img/portrait.jpg" alt="Portrait of Xuanzhe Han">
+            </figure>
+            <div class="section__content">
+                <p class="eyebrow">About</p>
+                <h2 id="about-title">Engineer focused on dependable tools and clear systems.</h2>
+                <p>
+                    I am a computer science graduate student at the University of California, Los Angeles,
+                    after completing my B.S. in Computer Science at UCLA in 2024. My recent work sits between
+                    production engineering and research: data pipelines, developer-facing tools, web dashboards,
+                    distributed systems, and applied machine learning.
+                </p>
+                <p>
+                    I like projects where the interface and the underlying system both matter. That has led me
+                    from React and Flask analytics products to ROS and C++ vehicle data tooling, Rust/WASM
+                    security experiments, and edge-device LLM benchmarking.
+                </p>
+                <div class="skill-groups" aria-label="Skills">
+                    <div>
+                        <h3>Languages</h3>
+                        <p>C++, Python, TypeScript, JavaScript, Go, Rust, SQL, Bash</p>
+                    </div>
+                    <div>
+                        <h3>Systems</h3>
+                        <p>Linux, ROS, FastAPI, Docker, Git, NDN, WebRTC, CUDA, Kafka</p>
+                    </div>
+                    <div>
+                        <h3>ML and Web</h3>
+                        <p>PyTorch, Hugging Face, scikit-learn, React, Flask, Node, REST APIs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--muted" id="experience" aria-labelledby="experience-title">
+            <div class="section__heading">
+                <p class="eyebrow">Experience</p>
+                <h2 id="experience-title">Recent Work</h2>
+            </div>
+            <div class="timeline">
+                <article class="timeline__item">
+                    <div class="timeline__meta">
+                        <h3>Nissan North America</h3>
+                        <p>Systems Research Intern</p>
+                        <time datetime="2024-09">Sep 2024</time> - <time datetime="2025-03">Mar 2025</time>
+                    </div>
+                    <div class="timeline__body">
+                        <p>
+                            Built a ROS and C++ pipeline for aligning multi-sensor vehicle logs and generating
+                            model-ready routing features. I also contributed FastAPI and TypeScript indexing and
+                            query logic for an internal dataset dashboard used by researchers.
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline__item">
+                    <div class="timeline__meta">
+                        <h3>Tap Series</h3>
+                        <p>Web Development Intern</p>
+                        <time datetime="2023-10">Oct 2023</time> - <time datetime="2024-01">Jan 2024</time>
+                    </div>
+                    <div class="timeline__body">
+                        <p>
+                            Developed a React and Flask analytics dashboard with interactive filtering and
+                            drill-down views. Integrated Twilio SendGrid event data so campaign owners could
+                            inspect delivery, open, click, bounce, and unsubscribe metrics.
+                        </p>
+                    </div>
+                </article>
+                <article class="timeline__item">
+                    <div class="timeline__meta">
+                        <h3>HUST Research</h3>
+                        <p>Research Intern</p>
+                        <time datetime="2023-08">Aug 2023</time> - <time datetime="2023-09">Sep 2023</time>
+                    </div>
+                    <div class="timeline__body">
+                        <p>
+                            Worked on facial action unit detection experiments, preparing reproducible PyTorch
+                            and scikit-learn workflows over BP4D and DISFA datasets and documenting model/data
+                            processing steps for the research team.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="section__heading">
+                <p class="eyebrow">Projects</p>
+                <h2 id="projects-title">Selected Builds</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card project-card--featured">
+                    <div>
+                        <p class="project-card__type">Secure collaboration</p>
+                        <h3>Ownly</h3>
+                        <p>
+                            Ongoing decentralized workspace built on Named Data Networking with MLS-style group
+                            security. I have been working across a Rust/WASM cryptography layer and TypeScript/Go
+                            control-plane code for message flow, persistence, and recovery.
+                        </p>
+                    </div>
+                    <ul class="tag-list" aria-label="Technologies">
+                        <li>NDN</li>
+                        <li>Rust</li>
+                        <li>WASM</li>
+                        <li>TypeScript</li>
+                        <li>Go</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-card__type">Distributed editing</p>
+                    <h3>DecentraDocs</h3>
+                    <p>
+                        Peer-to-peer collaborative editor using Yjs CRDTs over PeerJS/WebRTC with Dex-backed
+                        OpenID Connect identity. The project focused on keeping document state available without
+                        a central document server.
+                    </p>
+                    <ul class="tag-list" aria-label="Technologies">
+                        <li>Yjs</li>
+                        <li>WebRTC</li>
+                        <li>OIDC</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-card__type">Edge ML</p>
+                    <h3>On-Device LLM Deployment</h3>
+                    <p>
+                        Benchmarked llama.cpp model deployment on mobile/edge hardware with ADB automation,
+                        throughput measurement, and power profiling to compare latency and efficiency tradeoffs.
+                    </p>
+                    <ul class="tag-list" aria-label="Technologies">
+                        <li>llama.cpp</li>
+                        <li>ADB</li>
+                        <li>Profiling</li>
+                    </ul>
+                </article>
+
+                <article class="project-card project-card--with-media">
+                    <img src="img/resumatch.png" alt="ResuMatch Chrome extension screenshot">
+                    <div>
+                        <p class="project-card__type">Browser extension</p>
+                        <h3>ResuMatch</h3>
+                        <p>
+                            Chrome extension that compares job requirements with resume content and surfaces
+                            matched skills, role keywords, and fit signals while a user reviews job postings.
+                        </p>
+                        <a class="text-link" href="https://github.com/HiccupHan/ResuMatch/tree/main" target="_blank"
+                            rel="noopener noreferrer">Repository</a>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <p class="project-card__type">Systems experiments</p>
+                    <h3>Performance Projects</h3>
+                    <p>
+                        Built and evaluated focused systems projects including CUDA RNN acceleration, dynamic
+                        Kafka batching, FastAPI cache strategy benchmarks, and in-network random forest inference
+                        mapping for programmable switches.
+                    </p>
+                    <ul class="tag-list" aria-label="Technologies">
+                        <li>CUDA</li>
+                        <li>Kafka</li>
+                        <li>FastAPI</li>
+                        <li>RMT</li>
+                    </ul>
+                </article>
+
+                <article class="project-card project-card--with-media">
+                    <img src="img/nas1.jpg" alt="Custom Raspberry Pi NAS build">
+                    <div>
+                        <p class="project-card__type">Hardware</p>
+                        <h3>Raspberry Pi NAS</h3>
+                        <p>
+                            Designed and assembled a Raspberry Pi NAS with a custom 3D-printed enclosure,
+                            magnetic panels, a SATA hat, and an external temperature-controlled fan module.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section section--personal" aria-labelledby="personal-title">
+            <div>
+                <p class="eyebrow">Outside Work</p>
+                <h2 id="personal-title">A builder away from the keyboard too.</h2>
+            </div>
+            <div class="personal-grid">
+                <article>
+                    <h3>3D printing and keyboards</h3>
+                    <p>
+                        I have led project teams in 3D4E at UCLA, taught PCB and MicroPython basics, and built
+                        macropads from hand-soldered prototypes through custom PCB versions.
+                    </p>
+                </article>
+                <article>
+                    <h3>International background</h3>
+                    <p>
+                        I grew up in Nanjing, moved to the United States for school at 14, and have spent a lot
+                        of time learning how to work across different communities and expectations.
+                    </p>
+                </article>
+                <article>
+                    <h3>Small rituals</h3>
+                    <p>
+                        I read fiction, watch movies, and make coffee with too many gadgets. Those hobbies keep
+                        me patient with details and curious about how people experience the tools around them.
+                    </p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Xuanzhe "Mike" Han <span id="footer-year"></span></p>
+        <div>
+            <a href="https://github.com/HiccupHan" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/xuanzhe-han-542225206" target="_blank"
+                rel="noopener noreferrer">LinkedIn</a>
+            <a href="mailto:hanxuanzhe2002@gmail.com">Email</a>
+        </div>
+    </footer>
+
+    <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title" hidden>
+        <div class="modal__panel">
+            <div class="modal__header">
+                <div>
+                    <p class="eyebrow">PDF</p>
+                    <h2 id="resume-title">Resume</h2>
+                </div>
+                <div class="modal__actions">
+                    <a class="text-link" href="pdf/resume.pdf" target="_blank" rel="noopener">Open in new tab</a>
+                    <button class="modal__close" type="button" data-close-modal aria-label="Close resume"></button>
+                </div>
+            </div>
+            <iframe class="resume-frame" title="Xuanzhe Han resume" src="pdf/resume.pdf"></iframe>
         </div>
     </div>
-
-    <div class="modal" id="project__modal">
-        <a href="#close" class="close" id="close__project__modal"></a>
-
-            <div class="project__details" id="detail1">
-                <div class="detail__description">
-                    <p>A chrome extension I made with a group of 5 people. It allows users to upload their resumes, and when they are
-                        browsing LinkedIn job postings, they can use the extension to match uploaded resumes to the job posting to see an
-                        overall compatibility score and individual compatibility score for each resume so the user can easily determine which
-                        one is more suitable for the particular application. 
-                    </p>
-                    <p>The extension will also parse the posting and show the user keywords like required skills, job location, etc. In
-                        addition, it will present the user with a glassdoor review of the company.
-                    </p>
-                    <p>React was used to build the extension's frontend, which is what I primarily worked on. StreamLit, FastAPI, LevelDB,
-                        and SpaCy were used for backend. Click <a href="https://github.com/HiccupHan/ResuMatch/tree/main" target="_blank"
-                            rel="noopener noreferrer">here</a> to check out the repository and <a
-                            href="https://youtu.be/vnt1pXzRrbI?si=u_3vOCXtod0z12jR" target="_blank" rel="noopener noreferrer">here</a> to
-                        watch a presentation video.
-                    </p>
-                </div>
-                <div class="detail__img__container">
-                    <div class="project__gallery__cell gallery__cell1 fade">
-                        <img class="detail__img" src="/img/resumatch.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell1 fade">
-                        <img class="detail__img" src="/img/resumatch2.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell1 fade">
-                        <img class="detail__img" src="/img/resumatch3.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell1 fade">
-                        <img class="detail__img" src="/img/resumatch4.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell1 fade">
-                        <img class="detail__img" src="/img/resumatch5.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell1 fade">
-                        <img class="detail__img" src="/img/resumatch6.png">
-                    </div>
-                    <a class="modal--prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="modal--next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-
-            <div class="project__details" id="detail2">
-                <div class="detail__description">
-                    <p>A Network Attached Storage I made using a Raspberry Pi 4 Model B, 4 hard drives, and a SATA hat I bought online. It's running Open Media
-                        Vault. I designed the case myself with Autodesk Inventor.
-                    </p>
-                    <p>The NAS has a magnetically attached side panel, fan grill, and feet. I also made a external temperature-controlled
-                        fan using an arduino that can also be magnetically attached. Check out this <a
-                            href="https://drive.google.com/file/d/1dldis8797mawYGRQJsV4GqPp_mTqSmV6/view?usp=sharing" target="_blank"
-                            rel="noopener noreferrer">video</a> to see the fully assembled NAS and this <a
-                            href="https://drive.google.com/file/d/1P498C0TtsR1Atp1MjcJTchMxZlc7sHSQ/view?usp=sharing" target="_blank"
-                            rel="noopener noreferrer">video</a> to see the fan module in detail.
-                    </p>
-                </div>
-                <div class="detail__img__container">
-                    <div class="project__gallery__cell gallery__cell2 fade">
-                        <img class="detail__img" src="/img/nas1.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell2 fade">
-                        <img class="detail__img" src="/img/nas2.jpg">
-                    </div>
-                    <a class="modal--prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="modal--next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-
-            <div class="project__details" id="detail3">
-                <div class="detail__description">
-                    <p>I have made several macropads with Raspberry Pi Pico. All of them were coded with MicroPython. The first macropad I've made
-                        was modeled in the Autodesk Inventor and hand soldered. I later designed a PCB with KiCad and made two more macropads using
-                        those PCBs. The designs for those macropads were made using Fusion 360. These macropads all had programmable layers with different
-                        functions for each key. The user can switch layers on the fly.
-                    </p>
-                    <p>The case and keycaps are designed in Autodesk Inventor and 3D printed. Watch this <a
-                        href="https://drive.google.com/file/d/1e_o-lbGVLVGy5bLOEzxf5hGl8Y9OGJ7O/view?usp=sharing" target="_blank"
-                        rel="noopener noreferrer">video</a> to see the macro pad in action and this <a
-                        href="https://drive.google.com/file/d/1EN9REot0zgsKPnOPLZ7-SZyEPGUlwxNc/view?usp=sharing" target="_blank"
-                        rel="noopener noreferrer">video</a> to see the design.
-                    </p>
-                </div>
-                <div class="detail__img__container">
-                    <div class="project__gallery__cell gallery__cell3 fade">
-                        <img class="detail__img" src="/img/macropad5.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell3 fade">
-                        <img class="detail__img" src="/img/macropad4.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell3 fade">
-                        <img class="detail__img" src="/img/macropad3.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell3 fade">
-                        <img class="detail__img" src="/img/macropad1.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell3 fade">
-                        <img class="detail__img" src="/img/macropad2.jpg">
-                    </div>
-                    <a class="modal--modal--prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="modal--next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-
-            <div class="project__details" id="detail4">
-                <div class="detail__description">
-                    <p>A smart trash grabber with an accompying mobile app I made with a team of 4 other people in 36 hours. Most parts on
-                        the grabber are 3D printed or laser cut. It features a servo-operated claw, allowing users to pick up trash with
-                        the click of a button. If the grabber detects trash being picked up with its depth sensor, it will beep and send GPS
-                        location data to the grabber's accompanying app.
-                    </p>
-                    <p>The mobile app is a Pokémon-GO style Unity game. The main interface shows the user on a 3D map. People can report
-                        where trash is seen on the app, the locations of which will be sent to the backend made using Firebase, and trash
-                        hotspots will be calculated using the k means clustering algorithm and shown on the map. Whenever a user picks up
-                        trash, the app will receive GPS data from the grabber and display a flower for all other users on the map at the
-                        location indicated by the data. It will also increment user XP, incentivizing users to pick up more trash. The
-                        objective is to fill the map with as many flowers as possible to make it look like a blossoming garden.
-                    </p>
-                    <p>I worked on the Unity app with a friend. Check out the <a href="https://devpost.com/software/trashinator3000"
-                            target="_blank" rel="noopener noreferrer">Devpost</a> and the <a
-                            href="https://github.com/HiccupHan/LiterallyTrash" target="_blank" rel="noopener noreferrer">respository</a>.
-                    </p>
-                </div>
-                <div class="detail__img__container">
-                    <div class="project__gallery__cell gallery__cell4 fade">
-                        <img class="detail__img" src="/img/trashinator1.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell4 fade">
-                        <img class="detail__img" src="/img/trashinator2.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell4 fade">
-                        <img class="detail__img" src="/img/transhinator3.jpg">
-                    </div>
-                    <a class="modal--prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="modal--next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-
-            <div class="project__details" id="detail5">
-                <div class="detail__description">
-                    <p>A React web app I made with 4 other people. A user can create an account, choose an avatar, and interact with other
-                        users on a virtual platform. They can move their avatar around on a map, chat with other users in a global chat
-                        room, and create a little virtual booth with a zoom call link. If other users walk into the booth, they will be
-                        prompted with the link to join the call.
-                    </p>
-                    <p>The frontend of the app is made using React and CSS, and the backend is powered by AWS with DynamoDB and Ably
-                        Realtime. I mostly worked on the frontend. Watch the <a
-                            href="https://drive.google.com/file/d/1yiE2z-JMzZFOG7VCR74yypdhz4cAearM/view?usp=sharing" target="_blank"
-                            rel="noopener noreferrer">video</a> to see it in action and visit the 
-                            <a href="https://github.com/Fall-2021-CS-35L/fall2021-cs35l" target="_blank" rel="noopener noreferrer">respository</a>.
-                    </p>
-                </div>
-                <div class="detail__img__container">
-                    <div class="project__gallery__cell gallery__cell5 fade">
-                        <img class="detail__img" src="/img/digimeet1.jpg">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell5 fade">
-                        <img class="detail__img" src="/img/digimeet2.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell5 fade">
-                        <img class="detail__img" src="/img/digimeet3.png">
-                    </div>
-                    <div class="project__gallery__cell gallery__cell5 fade">
-                        <img class="detail__img" src="/img/digimeet4.jpg">
-                    </div>
-                    <a class="modal--prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="modal--next" onclick="plusSlides(1)">&#10095;</a>
-                </div>
-            </div>
-    </div>
-
-    <div class="main__content">
-        <div class="intro__splash">
-            <div class="greeting">
-                <h2>Hi there!</h2>
-                <h2>I'm Xuanzhe "Mike" Han</h2>
-            </div>
-        </div>
-
-        <div class="prof">
-            <div class="prof__img">
-                <img class="selfie" src="/img/portrait.jpg" alt="no image found">
-            </div>
-            <div class="intro">
-                <div id="about">
-                    <h3>About Me</h3>
-                    <p>Hi! I'm Mike, a Computer Science graduate student at Univerity of California, Los Angeles.</p>
-                    <p>I'm from Nanjing, a city near Shanghai in China. I came to the states for high school when I was 14. I'm an easy-going, diligent, independent, and trustworthy person.</p>
-                </div>
-                <div id="skills">
-                    <h3>My Skills</h3>
-                    <p>I'm proficient with C/C++, Python. Additionally, I have learned and used Java, JavaScript, OCaml, Scheme/LISP, Prolog, and Bash
-                    Script.
-                    </p>
-                    <p>I have experience with front-end web development, specifically with React, HTML, and CSS. I have built several web applications and a chrome extension.
-                        I'm familiar with various stages of software development, and am proficient in using Git in a collaborative working enviroment.
-                    </p>
-                    <p>Having studied various topics in the field of computer sceince, I have extensive knowledge of programming languages, 
-                        algorithms and data structures, software development methodologies, and web technologies. I also possess strong foundational
-                        comprehension of digital logic in computer systems, operating systems, automata theories, and the design principles of
-                        programming languages. I have studied extensively in various topics in machine learning. I have strong foundational knowledge of old ML models
-                        like Naive Bayesian Models, K Nearest Neighbors, Logistic Regression Models, and others. I also have learned modern approaches to machine learning,
-                        including various deep learning methods for both natural language processing and computer vision. I'm familiar with PyTorch and HuggingFace.
-                    </p> 
-                </div>
-            </div>
-        </div>
-
-        <div class="transition__background" id="transition1">
-        </div>
-        
-        <div class="projects">
-            <div class="project__section__title">
-                <h1>My Projects</h1>
-            </div>
-            <div class="projects__container">
-                <div class="project__stack" id="project2">
-                    <div class="project__title">
-                        <h2>Raspberry NAS</h2>
-                    </div>
-                    <div class="project__image__container">
-                        <img class="front__image" src="/img/nas1.jpg" >
-                        <div class="fade__container">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                            <img src="/img/nas1.jpg" class="fade__image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project__stack">
-                    <div class="project__title">
-                        <h2>ResuMatch</h2>
-                    </div>
-                    <div class="project__image__container" id="project1">
-                        <img class="front__image" src="/img/resumatch.png">
-                        <div class="fade__container">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                            <img src="/img/resumatch.png" class="fade__image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project__stack" id="project3">
-                    <div class="project__title">
-                        <h2>Macropad</h2>
-                    </div>
-                    <div class="project__image__container">
-                        <img class="front__image" src="/img/macropad5.jpg">
-                        <div class="fade__container">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                            <img src="/img/macropad5.jpg" class="fade__image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project__stack" id="project4">
-                    <div class="project__title">
-                        <h2>Trashinator 3000</h2>
-                    </div>
-                    <div class="project__image__container">
-                        <img class="front__image" src="/img/trashinator2.jpg" >
-                        <div class="fade__container">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                            <img src="/img/trashinator2.jpg" class="fade__image">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project__stack" id="project5">
-                    <div class="project__title">
-                        <h2>Digimeet</h2>
-                    </div>
-                    <div class="project__image__container">
-                        <img class="front__image" src="/img/digimeet2.png" >
-                        <div class="fade__container">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                            <img src="/img/digimeet2.png" class="fade__image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="transition__background" id="transition2">   
-        </div>
-
-        <div class="intro__cards">
-            <div class="card" id="card1">
-                <div class="card__front">
-                    <h3>My Story</h3>
-                </div>
-                <div class="card__back">
-                    <p> I grew up in a city in China, and when I was 14,
-                        I enrolled in an all-boy boarding school in Virginia. The transition from a bustling city to a small school in the
-                        mountains was challenging, yet it shaped my present identity.
-                    </p>
-                    <p>I learned to be adaptable, to navigate diverse settings. The experience made me independent, more self-sufficient.
-                        Living in a communal enviroment with people who came from different countries, communities, family backgrounds eriched my abilities for teamwork and collaboration.
-                    </p>
-                    <p>Now that I moved to LA, I found myself appreciating the convenience of cities more than when I was a kid, but I
-                        sometimes miss the tranquil life in small towns. The fusion of urban and rural life styles and the exposure to a
-                        global community made me who I am today.</p>
-                </div>
-            </div>
-
-            <div class="card" id="card2">
-                <div class="card__front">
-                    <h3>My Hobbies</h3>
-                </div>
-                <div class="card__back">
-                    <p>I love coffee. I have an unhealthy collection of coffee-making gadgets, and not enough room to store them.</p>
-                    <p>I watch a lot of movies and TV shows, especially comedies and dramas. My favorite movie is Lost in Translation (I have a thing for slice of life movies)</p>
-                    <p>I enjoy reading science fictions and fictions in general. My favorite sci-fi book is Dune and my two favorite books of
-                        all time are Norwegian Wood by Haruki Murakami and The Island by Victoria Hislop.
-                    </p>
-                    <p>3D printing is another hobby of mine. I have made things ranging from cursed objects to macropads. I spend a lot of time tinkering
-                        with my 3D printer and making small projects.
-                    </p>
-
-                </div>
-            </div>
-
-            <div class="card" id="card3">
-                <div class="card__front">
-                    <h3>What I have done</h3>
-                </div>
-                <div class="card__back">
-                    <p>I interned at TAP Series LLC. I worked on a web tool for the marketing deparment built with React and Flask. It utilizes Twilio
-                        Sendgrid API to collect marketing email statistics and visualizes them in graphs, allowing the marketing team to see breakdowns
-                        of how effective their marketing emails are.
-                    </p>
-                    <p>I also worked as an intern for Facial Action Unit Detection Research team at Huazhong Science and Technology University. I worked
-                        with BP4D and DISFA datasets, modifying them to work with machine learning models that detect facial action units for automated
-                        facial expression classification.
-                    </p>
-                    <p>I'm a board member in 3D4E, a 3D printing club in UCLA, and have occupied several positions.</p>
-                    <p>I was the biomedical team lead. I led the team to build custom pipette holders and oximeters.  I'm currently the keyboard team lead,
-                        and I have led my team to build a macropad, and taught members the basics of PCB design, MicroPython, QMK, and 3D designs with Fusion 360. \
-                        We are currently designing a 75% keyboard.
-                    </p>
-                    <p>I'm also the webmaster for the club. Visit the club website <a href="https://3d4eatucla.github.io/" target="_blank" rel="noopener noreferrer">here</a></p>
-                    
-            </div>
-        </div>
-    </div>
-    <div class="transition__background" id="transition3">
-    </div>
-    <div class="bottom">
-        <p>Feel free to contact me through email!</p>
-    </div>
-    </div>
-    <script src="/flickity.pkgd.js"></script>
-    <script src="main.js"></script>
 </body>
 
 </html>
