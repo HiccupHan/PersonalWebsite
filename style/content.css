@@ -355,6 +355,10 @@ section[id] {
     text-decoration: underline;
 }
 
+.project-card--featured .text-link {
+    color: #ffffff;
+}
+
 .section--personal {
     background-image: linear-gradient(rgba(247, 243, 236, 0.92), rgba(247, 243, 236, 0.92)), url("../img/coffee.webp");
     background-position: center;
